@@ -48,6 +48,12 @@ $('.menu-button').on('click', function(event) {
 });
 
 
+$('.offerSlider, .historySlider').slick({
+  dots: false,
+  arrows: true
+});
+
+
 });
 
 
