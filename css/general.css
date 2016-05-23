@@ -245,7 +245,7 @@ a[href^=tel] {
   font-weight: 300;
   font-style: normal; }
 @font-face {
-  font-family: 'Circe';
+  font-family: 'CirceBold';
   src: url("../fonts/subset-Circe-Bold.eot");
   src: url("../fonts/subset-Circe-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-Circe-Bold.woff") format("woff"), url("../fonts/subset-Circe-Bold.ttf") format("truetype"), url("../fonts/subset-Circe-Bold.svg#Circe-Bold") format("svg");
   font-weight: bold;
@@ -356,6 +356,16 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 /*---------------------- 
   TYPOGRAPHY
 ------------------------*/
+h2 {
+  font: 30px 'Bandera Display Cyrillic';
+  color: #5E4644;
+  text-transform: uppercase; }
+
+.date {
+  font: 17px 'Circe';
+  font-weight: bold;
+  color: #B99148; }
+
 section {
   position: relative;
   z-index: 2;
@@ -660,55 +670,60 @@ nav ul {
   margin: auto;
   z-index: 1000; }
 
-.historySlider__slide {
-  padding-bottom: 45px;
-  position: relative; }
-  .historySlider__slide__info {
-    padding-bottom: 70px; }
-    .historySlider__slide__info__img {
-      height: 330px;
-      position: relative;
-      overflow: hidden;
-      -webkit-border-radius: 50%/30px;
-      border-radius: 50%/30px; }
-      .historySlider__slide__info__img:after {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        content: "";
-        display: block;
-        width: 98%;
-        height: 97%;
-        background: transaprent;
-        border: 2px solid #fff;
+.historySec {
+  padding-top: 80px; }
+
+.historySlider {
+  margin-top: 25px; }
+  .historySlider__slide {
+    padding-bottom: 45px;
+    position: relative; }
+    .historySlider__slide__info {
+      padding-bottom: 70px; }
+      .historySlider__slide__info__img {
+        height: 330px;
+        position: relative;
+        overflow: hidden;
         -webkit-border-radius: 50%/30px;
         border-radius: 50%/30px; }
-      .historySlider__slide__info__img img {
-        position: absolute;
-        position: absolute;
-        left: -100%;
-        right: -100%;
-        top: -100%;
-        bottom: -100%;
-        margin: auto;
-        min-height: 100%;
-        min-width: 100%;
-        width: auto;
-        height: auto; }
-    .historySlider__slide__info p {
-      color: #5E4644;
-      font-size: 14px; }
-  .historySlider__slide button {
-    position: absolute;
-    bottom: 22px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 2;
-    color: #5E4644; }
+        .historySlider__slide__info__img:after {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          content: "";
+          display: block;
+          width: 96%;
+          height: 95%;
+          background: transaprent;
+          border: 2px solid #fff;
+          -webkit-border-radius: 50%/30px;
+          border-radius: 50%/30px; }
+        .historySlider__slide__info__img img {
+          position: absolute;
+          position: absolute;
+          left: -100%;
+          right: -100%;
+          top: -100%;
+          bottom: -100%;
+          margin: auto;
+          min-height: 100%;
+          min-width: 100%;
+          width: auto;
+          height: auto; }
+      .historySlider__slide__info p {
+        color: #5E4644;
+        font-size: 14px; }
+    .historySlider__slide button {
+      position: absolute;
+      bottom: 22px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 2;
+      color: #5E4644; }
 
 .history-date {
   z-index: 50;
@@ -744,7 +759,9 @@ footer {
   position: relative;
   background-image: url(../images/footer_bg.jpg);
   background-position: 50% 0;
-  background-repeat: repeat-x; }
+  background-repeat: repeat-x;
+  background-color: #FFF;
+  z-index: 2; }
   footer:after {
     content: '';
     width: 100%;

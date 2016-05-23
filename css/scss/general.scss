@@ -32,7 +32,16 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 /*---------------------- 
   TYPOGRAPHY
 ------------------------*/
-
+h2 {
+    font: 30px 'Bandera Display Cyrillic';
+    color: $brown;
+    text-transform: uppercase;
+}
+.date {
+    font: 17px 'Circe';
+    font-weight: bold;
+    color: $gold;
+}
 
 
 section {
@@ -324,7 +333,12 @@ nav ul {
 
 
 
+.historySec {
+    padding-top: 80px;
+}
+
 .historySlider {
+    margin-top: 25px;
     &__slide{
         padding-bottom: 45px;
         position: relative;
@@ -343,7 +357,7 @@ nav ul {
                     margin: auto;
                     content: "";
                     display: block;
-                    width: 98%; height: 97%;
+                    width: 96%; height: 95%;
                     background: transaprent;
                     border: 2px solid #fff;
                     -webkit-border-radius: 50%/30px;
