@@ -356,6 +356,11 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 /*---------------------- 
   TYPOGRAPHY
 ------------------------*/
+section {
+  position: relative;
+  z-index: 2;
+  background-color: #FFF; }
+
 /*---------------------- 
     BUTTON STYLES
 ------------------------*/
@@ -574,11 +579,6 @@ nav ul {
   -webkit-border-radius: 50%/18px;
   -webkit-border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0; }
-
-section {
-  position: relative;
-  z-index: 2;
-  background-color: #FFF; }
 
 /*---------------------- 
     INFOBLOCKS STYLES
