@@ -1,0 +1,31 @@
+// COLORS
+// ---------------------------
+$colorGrey: #3A3A3A;
+$colorBlue: #30A7E4;
+$colorBlueD: #062A41;
+
+
+// FONTS
+// ---------------------------
+$fontH: 24px/28px 'Helvetica';
+$fontSH: 22px/26px 'Helvetica';
+$fontT: 16px/22px 'Helvetica';
+
+
+html, body                    	{   height: 100%;}
+p                             	{   color: $colorGrey;}
+h1, h2, h3, h4, h5, p         	{   color: $colorGrey;}
+.white                          {	color: #FFF;}
+
+
+// lAYOUT
+// ---------------------------
+
+.wrapper                      	{   width: 1200px;
+								   	margin: 0 auto;
+                                   	text-align: center;
+                              	}
+header 							{}
+aside 							{}
+main 							{}
+footer 							{}

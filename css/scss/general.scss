@@ -1,0 +1,318 @@
+@import 'reset';
+@import 'settings';
+@import 'mixins';
+
+
+
+/*
+
+CSS clearfix----------  @extend %clearfix;
+
+CSS vertical align 
+with before  ---------  @extend %clearfix;
+
+CSS position----------  @include position(absolute, auto, 0, auto, 0);
+
+CSS transition--------  @include transition(all, .2s);
+CSS transform---------  @include transform(rotate(45deg));
+CSS animation---------  @include animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms);
+
+CSS FLEX--------------  @include flex($alignI: center, $justify: space-between,  $direction: row, $wrap: nowrap);	  
+CSS FLEX direction----  @include flexDirection(column);
+  
+CSS Triangle----------  @include triangle(left, $size: 6px, $color: #222);
+CSS text ending ------  @include textEnd($overflow: ellipsis); // values are: clip, ellipsis, or a string
+CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $direction: top);
+
+
+*/
+
+
+/*---------------------- 
+    BUTTON STYLES
+------------------------*/
+.button {
+    height: 42px; 
+    padding: 0 17px; 
+    border: 1px solid #fff; 
+    background-color: transparent; 
+    color: #FFF; 
+    -webkit-border-radius: 10px;
+    border-radius: 6px; 
+    font: 18px 'helvetica';
+    cursor: pointer;
+    @include transition(all, .2s);
+    
+    &:hover {background-color: rgba(255,255,255, .2);}
+}
+
+h1 {
+  font: 36px/48px $rb;
+  color: $blue;
+  text-align: left;
+  .subtitle {
+    font: 16px/30px $rm;
+  }
+}
+h2 {
+  font: 30px/50px $rb;
+  color: #000;
+  display: block;
+  text-transform: uppercase;
+}
+.main-page h2 {
+  width: 100%;
+  text-align: center;
+  padding: 0 20%;
+}
+p {font: 13px/24px $v;}
+a {
+  color: $blue; 
+  text-decoration: underline;
+  @include transition(all, .2s);
+  &:hover {
+      text-decoration: underline;
+  }
+}
+
+/*---------------------- 
+    BUTTON STYLES
+------------------------*/
+.button {
+    height: 42px; 
+    padding: 0 17px; 
+    border: 1px solid #fff; 
+    background-color: transparent; 
+    color: #FFF; 
+    -webkit-border-radius: 10px;
+    border-radius: 6px; 
+    font: 18px 'helvetica';
+    cursor: pointer;
+    @include transition(all, .2s);
+    
+    &:hover {background-color: rgba(255,255,255, .2);}
+}
+
+
+/*---------------------- 
+    HEADER STYLES
+------------------------*/
+header {
+    margin: 0;
+    left:0;
+    @include position(absolute, 0, auto, auto, 0);
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+    @include transition(all, .4s);
+
+    @include m800 {
+         @include position(fixed, 0, auto, auto, -100%);
+         width: 260px !important;
+         height: 100%;
+         text-align: center;
+         background-color: #fff;
+         margin-top: 0;
+         padding: 20px 0;
+         z-index: 100;
+         
+         &.active {left: 0;}
+         
+         .wrapper {
+               @include flexDirection(column);
+               width: 100%;
+        }
+    }
+
+
+    .header__top {
+        padding: 7px 0;
+        background-color: $blueD;
+        color: #FFF;
+        .wrapper {
+            @include flex();
+        }
+        .divide {
+            height: 35px;
+            width: 1px;
+            vertical-align: middle;
+            background-color: #1E5D75;
+        }
+    }
+     .header__bottom {
+        padding: 30px 0;
+        background-color: #fff;
+        .wrapper {
+            @include flex();
+        }
+    }
+}
+
+.tel,
+.mail,
+.timeOfWork {
+    font: 16px/25px $rb;
+    color: #FFF;
+}
+
+.logo {
+    position: relative;
+    display: block;
+  & img {
+     height: 100%;
+     display: inline-block;
+     vertical-align: middle;   
+    }
+    & p {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 18px;
+        font: 38px/19px $rb;
+        text-transform: uppercase;
+        text-align: left;
+        color: $orange;
+        padding-top: 6px;
+        span{
+         color: $blue;
+         display: inline-block;
+        }
+        strong {
+            font: 11px/19px $rm;
+            color: #000;
+            text-transform: none;
+            display: block;
+            margin-top: 5px;
+            padding-left: 2px;
+        }
+    }
+}
+
+
+/*-------- nav ---------*/
+nav ul {
+        @include flex();
+        list-style-type: none;
+        &  a {
+            font: 16px/50px $rb;
+            color: $blue;
+            display: inline-block;
+            margin: 0 20px;
+            text-decoration: none;
+            @include transition(all, .2s);
+                
+            &:hover {}
+        }
+
+
+      @include m800 { 
+          display: block;
+          height: 100%;
+          overflow: scroll;
+          position: relative;
+          
+          li a                    {   
+                margin: 0 0 25px 0;
+                &.active {color: #ECCC1D;}
+                &:hover  {background: transparent;}
+          } 
+      }
+}
+
+
+
+/* ------- menu toggle --------- */
+.menu-button                  {    
+                                    display: none;
+                                    width: 50px;
+                                    height: 50px;
+                                    @include position(fixed, 15px, 15px, auto, auto);
+                                    margin: auto; 
+                                    cursor: pointer;
+                                    z-index: 100;
+                                    background-color: salmon;
+                                    border: none;
+                                    -webkit-border-radius: 4px;
+                                            border-radius: 4px;
+      .menu-line                    {
+                                          display: block;
+                                          @include position(absolute, auto, 0, auto, 0);
+                                          width: 60%;
+                                          height: 5px;
+                                          background-color: #fff;
+                                          -webkit-border-radius: 1px;
+                                          border-radius: 1px;
+                                          @include transition(all, .4s);
+      }
+
+      .top_line                     {   top: 12px;  margin: auto;}
+      .middle_line                  {   top: 22px;  margin: auto;}
+      .bottom_line                  {   bottom: 12px; margin: auto;}
+
+      &.active                      {   -webkit-border-radius: 6px; border-radius: 6px;}
+      &.active .top_line            {   @include transform(rotate(45deg)); top: 45%;}
+      &.active .bottom_line         {   @include transform(rotate(-45deg)); bottom: 45%;}
+      &.active .middle_line         {   width: 0; left: 50%;}
+
+      @include m800 {
+            display: block;
+      }
+
+}
+
+
+
+
+/*---------------------- 
+    OFFER STYLES
+------------------------*/
+.offer {
+    height: 100%;
+    min-height: 650px;
+    max-height: 900px;
+    background: url('../images/law.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 200px 0 0 0;
+    position: relative;
+
+
+    .offerInfo {
+        height: 100%;
+        @include flex($alignI: center, $justify: space-around, $direction: column);
+        z-index: 2;
+        position: relative;
+        text-align: center;
+    }
+
+}
+
+
+/*---------------------- 
+    INFOBLOCKS STYLES
+------------------------*/
+.infoBlocks {
+      @include flex($alignI: top, $justify: center, $wrap: wrap);
+      
+      .infoBlock  {
+                  margin-bottom: 20px;
+                  padding: 0 20px;
+                  text-align: center;
+                  border: 1px solid peru;
+            &_icon {
+                        width: 150px;
+                        height: 150px;
+                        text-align: center;
+                        margin: 10px auto 15px;
+            }
+        }
+
+    &.--two  .infoBlock   {    width: 50%;}
+    &.--four .infoBlock   {    width: 25%;}
+    &.--three .infoBlock  {    width: 33%;}
+}
+
+
+
+
+
+
+
