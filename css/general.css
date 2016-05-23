@@ -262,6 +262,9 @@ h1, h2, h3, h4, h5, p {
 .white {
   color: #FFF; }
 
+body {
+  padding-top: 50px; }
+
 .wrapper {
   width: 100%;
   max-width: 600px;
@@ -415,7 +418,7 @@ header {
 .topLine {
   margin: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: auto;
   top: 0;
@@ -553,36 +556,29 @@ nav ul {
     OFFER STYLES
 ------------------------*/
 .offer {
-  height: 100%;
-  min-height: 650px;
-  max-height: 900px;
-  background: url("../images/law.jpg") no-repeat center center;
-  background-size: cover;
-  padding: 200px 0 0 0;
-  position: relative; }
-  .offer .offerInfo {
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    z-index: 2;
-    position: relative;
-    text-align: center; }
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: auto;
+  height: 470px;
+  background-color: #5E4644; }
+  .offer + .offerSpace {
+    height: 470px;
+    background-color: #FFF; }
+
+.roundBottom {
+  border-radius: 50%/18px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-radius: 50%/18px;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0; }
+
+section {
+  position: relative;
+  z-index: 2;
+  background-color: #FFF; }
 
 /*---------------------- 
     INFOBLOCKS STYLES
