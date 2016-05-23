@@ -1,0 +1,553 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+body {
+  margin: 0; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: .83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: .83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: .67em;
+  margin: 2.33em 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+p, pre {
+  margin: 1em 0; }
+
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  _font-family: 'courier new',monospace;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+dl, menu, ol, ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+menu, ol, ul {
+  padding: 0 0 0 40px; }
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"],
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  max-width: 100%; }
+
+h1, h2, h3, h4, h5, p {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+strong {
+  font-weight: 900; }
+
+ul {
+  padding: 0; }
+
+* {
+  box-sizing: border-box;
+  outline: none; }
+
+*:focus {
+  outline: none; }
+
+::-moz-focus-inner {
+  border: 0; }
+
+a[href^=tel] {
+  color: inherit !important;
+  text-decoration: none; }
+
+html, body {
+  height: 100%; }
+
+p {
+  color: #5E4644; }
+
+h1, h2, h3, h4, h5, p {
+  color: #5E4644; }
+
+.white {
+  color: #FFF; }
+
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center; }
+
+/* ----------------- clearfix  ------------- */
+/* -------------- veretical align ---------- */
+/* -------------- position ---------- */
+/* ------------------ flex ----------------- */
+/* ------------------ flex ----------------- */
+/*
+.flex-center-spaceB,
+.flex-center-spaceA,
+.flex-center-spaceS,
+.flex-start-spaceB,
+.flex-start-spaceA,
+.flex-start-spaceS {
+    -webkit-display: flex;
+  display: flex;
+}
+.flex-center-spaceB {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.flex-center-spaceA {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.flex-center-spaceS {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-start;
+  justify-content: space-start;
+}
+
+.flex-start-spaceB {
+  -webkit-align-items: start;
+  align-items: start;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.flex-start-spaceA {
+  -webkit-align-items: start;
+  align-items: start;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.flex-start-spaceS {
+  -webkit-align-items: start;
+  align-items: start;
+  -webkit-justify-content: space-center;
+  justify-content: space-center;
+}
+*/
+/* ------------------- animation   ---------------*/
+/* -------------- transition ---------- */
+/* -------------- transition ---------- */
+/* ------------------- text ending ---------------*/
+/* ------------------- tooltip  ---------------*/
+/* ------------------- triangle ---------------*/
+/* ------------------- media ---------------*/
+/*
+
+CSS clearfix----------  @extend %clearfix;
+
+CSS vertical align 
+with before  ---------  @extend %clearfix;
+
+CSS position----------  @include position(absolute, auto, 0, auto, 0);
+
+CSS transition--------  @include transition(all, .2s);
+CSS transform---------  @include transform(rotate(45deg));
+CSS animation---------  @include animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms);
+
+CSS FLEX--------------  @include flex($alignI: center, $justify: space-between,  $direction: row, $wrap: nowrap);	  
+CSS FLEX direction----  @include flexDirection(column);
+  
+CSS Triangle----------  @include triangle(left, $size: 6px, $color: #222);
+CSS text ending ------  @include textEnd($overflow: ellipsis); // values are: clip, ellipsis, or a string
+CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $direction: top);
+
+
+*/
+/*---------------------- 
+  TYPOGRAPHY
+------------------------*/
+/*---------------------- 
+    BUTTON STYLES
+------------------------*/
+.button {
+  height: 42px;
+  padding: 0 17px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #FFF;
+  -webkit-border-radius: 10px;
+  border-radius: 6px;
+  font: 18px 'helvetica';
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s; }
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+/*---------------------- 
+    BUTTON STYLES
+------------------------*/
+.button {
+  height: 42px;
+  padding: 0 17px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #FFF;
+  -webkit-border-radius: 10px;
+  border-radius: 6px;
+  font: 18px 'helvetica';
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s; }
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+
+/*---------------------- 
+    HEADER STYLES
+------------------------*/
+header {
+  margin: 0;
+  left: 0;
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  -webkit-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s; }
+
+/*-------- nav ---------*/
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style-type: none; }
+  nav ul a {
+    display: inline-block;
+    margin: 0 20px;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s; }
+
+/* ------- menu toggle --------- */
+.menu-button {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: auto;
+  right: 15px;
+  top: 15px;
+  bottom: auto;
+  margin: auto;
+  cursor: pointer;
+  z-index: 100;
+  background-color: salmon;
+  border: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  .menu-button .menu-line {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    width: 60%;
+    height: 5px;
+    background-color: #fff;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s; }
+  .menu-button .top_line {
+    top: 12px;
+    margin: auto; }
+  .menu-button .middle_line {
+    top: 22px;
+    margin: auto; }
+  .menu-button .bottom_line {
+    bottom: 12px;
+    margin: auto; }
+  .menu-button.active {
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
+  .menu-button.active .top_line {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 45%; }
+  .menu-button.active .bottom_line {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 45%; }
+  .menu-button.active .middle_line {
+    width: 0;
+    left: 50%; }
+  @media (max-width: 800px) {
+    .menu-button {
+      display: block; } }
+
+/*---------------------- 
+    OFFER STYLES
+------------------------*/
+.offer {
+  height: 100%;
+  min-height: 650px;
+  max-height: 900px;
+  background: url("../images/law.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 200px 0 0 0;
+  position: relative; }
+  .offer .offerInfo {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    z-index: 2;
+    position: relative;
+    text-align: center; }
+
+/*---------------------- 
+    INFOBLOCKS STYLES
+------------------------*/
+.infoBlocks {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: top;
+  -ms-align-items: top;
+  align-items: top;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .infoBlocks .infoBlock {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: center;
+    border: 1px solid peru; }
+    .infoBlocks .infoBlock_icon {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      margin: 10px auto 15px; }
+  .infoBlocks.--two .infoBlock {
+    width: 50%; }
+  .infoBlocks.--four .infoBlock {
+    width: 25%; }
+  .infoBlocks.--three .infoBlock {
+    width: 33%; }
+
+/*# sourceMappingURL=general.css.map */
