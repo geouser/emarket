@@ -10,6 +10,9 @@
 	&.button--full {
 		width: 100%;
 	}
+	&.small {
+		height: 33px;
+	}
 
 	&.button--empty {
 		border: 2px solid #fff;
@@ -26,4 +29,7 @@
 
 a.button {
 	line-height: 38px;
+}
+a.button.small {
+	line-height: 33px;
 }

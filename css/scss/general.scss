@@ -87,7 +87,7 @@ header {
     z-index: 101;
     height: 100%;
     padding-top: 45px;
-    @include position(absolute, 0, auto, auto, -100%);
+    @include position(fixed, 0, auto, auto, -100%);
     @include transition(all, .4s);
     overflow: scroll;
     &.active {
@@ -166,6 +166,7 @@ nav ul {
             position: relative;
             width: 100%;
             text-align: center;
+            font: 20px $bz;
             @include transition(all, .2s);
             &.active:after {
                 -webkit-transform: rotate(-90deg);
@@ -416,16 +417,16 @@ nav ul {
                 font-size: 14px;
             }
         }
-        button {
+        .button {
             position: absolute;
-            bottom: 22px;
+            bottom: 49px;
             left: 0;
             right: 0;
             margin: auto;
             z-index: 2;
-            color: $brown;
         }
     }
+    .slick-arrow {bottom: 20px !important;}
 }
 
 .history-date    {
@@ -437,7 +438,7 @@ nav ul {
     border-radius: 45%/3px;
     background: $brown;
     color: #fff;
-    line-height: 2;
+    font: 24px/45px $bb;
     &:after {
         position: absolute;
         top: 5px;

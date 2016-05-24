@@ -294,6 +294,8 @@ body {
   vertical-align: middle; }
   .button.button--full {
     width: 100%; }
+  .button.small {
+    height: 33px; }
   .button.button--empty {
     border: 2px solid #fff;
     background-color: transparent;
@@ -305,6 +307,9 @@ body {
 
 a.button {
   line-height: 38px; }
+
+a.button.small {
+  line-height: 33px; }
 
 /* ----------------- clearfix  ------------- */
 /* -------------- veretical align ---------- */
@@ -440,7 +445,7 @@ header {
   z-index: 101;
   height: 100%;
   padding-top: 45px;
-  position: absolute;
+  position: fixed;
   left: -100%;
   right: auto;
   top: 0;
@@ -529,6 +534,7 @@ nav ul {
     position: relative;
     width: 100%;
     text-align: center;
+    font: 20px "BazhanovC";
     -webkit-transition: all 0.2s;
     -ms-transition: all 0.2s;
     transition: all 0.2s; }
@@ -783,14 +789,15 @@ nav ul {
       .historySlider__slide__info p {
         color: #5E4644;
         font-size: 14px; }
-    .historySlider__slide button {
+    .historySlider__slide .button {
       position: absolute;
-      bottom: 22px;
+      bottom: 49px;
       left: 0;
       right: 0;
       margin: auto;
-      z-index: 2;
-      color: #5E4644; }
+      z-index: 2; }
+  .historySlider .slick-arrow {
+    bottom: 20px !important; }
 
 .history-date {
   z-index: 50;
@@ -801,7 +808,7 @@ nav ul {
   border-radius: 45%/3px;
   background: #5E4644;
   color: #fff;
-  line-height: 2; }
+  font: 24px/45px "Bandera-Display-Cyrillic-Bold"; }
   .history-date:after {
     position: absolute;
     top: 5px;
@@ -829,8 +836,7 @@ footer {
   background-image: url(../images/footer_bg.jpg);
   background-position: 50% 0;
   background-repeat: repeat-x;
-  background-color: #FFF;
-  z-index: 2; }
+  background-color: #FFF; }
   footer:after {
     content: '';
     width: 100%;
