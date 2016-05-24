@@ -239,7 +239,7 @@ nav ul {
     height: 470px;
     z-index: 0!important;
     overflow: hidden;
-    max-width: 600px;
+    width: 360px;
     margin: 0 auto;
     & + .offerSpace {
         height: 470px;
@@ -380,10 +380,17 @@ nav ul {
 
 .historySec {
     padding-top: 80px;
+    background-image: url(../images/history.png);
+    background-repeat: no-repeat;
+    background-size: 360px;
+    background-position: 50% 0;
+    background-color: transparent;
+    margin-top: -20px;
 }
 
 .historySlider {
     margin-top: 25px;
+    background-color: #fff;
     &__slide{
         padding-bottom: 45px;
         position: relative;
@@ -467,6 +474,11 @@ nav ul {
   -webkit-filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
   -o-filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
   filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
+  overflow: hidden;
+  width: 360px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @import 'footer';
