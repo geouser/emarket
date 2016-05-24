@@ -425,6 +425,9 @@ nav ul {
 .historySlider {
     margin-top: 25px;
     background-color: #fff;
+    -webkit-border-radius: 100% 100% 100% 100% / 60px 60px 40px 40px;
+            border-radius: 100% 100% 100% 100% / 60px 60px 40px 40px;
+    overflow: hidden;
     &__slide{
         padding-bottom: 45px;
         position: relative;
@@ -434,8 +437,8 @@ nav ul {
                 height: 330px;
                 position: relative;
                 overflow: hidden;
-                -webkit-border-radius: 50%/30px;
-                        border-radius: 50%/30px;
+                -webkit-border-radius: 100%/ 60px;
+                        border-radius: 100%/ 60px;
                         overflow: hidden;
                 &:after {
                     position: absolute;
@@ -447,8 +450,8 @@ nav ul {
                     width: 96%; height: 95%;
                     background: transaprent;
                     border: 2px solid #fff;
-                    -webkit-border-radius: 50%/30px;
-                        border-radius: 50%/30px;
+                    -webkit-border-radius: 100%/ 60px;
+                        border-radius: 100%/ 60px;
                 }
                 img {
                     position: absolute;
@@ -525,7 +528,6 @@ nav ul {
   -webkit-filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
   -o-filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
   filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
-  overflow: hidden;
   width: 360px;
   display: block;
   margin-left: auto;
