@@ -97,14 +97,28 @@ $('.menu-button').on('click', function(event) {
   $('.select .holder').text($('select#menu option:selected').text());
   var menuSelector = '#' + $('select#menu').val();
   $(menuSelector).css('display', 'block');
-  $('select#menu').on('change', function(event) {
-    event.preventDefault();
-    menuSelector = '#' + $(this).val();
-    $('.select .holder').text($(this).find('option:selected').text());
-    $('.menu-list').css('display', 'none');
-    $(menuSelector).css('display', 'block');
+
+  $('.select').append('<ul class="dropdown"></ul>');
+  var options = $('select#menu option');
+  options.each(function(index, el) {
+    $('.dropdown').append('<li data-selector="'+$(this).val()+'" class="dropdown-item">'+$(this).text()+'</li>')
   });
 
+  $('.select').on('click', function(event) {
+    event.preventDefault();
+    $(this).toggleClass('active');
+  });
+
+  $('.dropdown-item').on('click', function(event) {
+    event.preventDefault();
+    var text = $(this).text();
+    var selector = $(this).data('selector');
+    $('select#menu').val(selector);
+    $('.select .holder').text(text);
+
+    $('.menu-list').css('display', 'none');
+    $('#'+selector).css('display', 'block');
+  });
 
 }); // end
 
