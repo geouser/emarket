@@ -40,6 +40,7 @@ $('.menu-button').on('click', function(event) {
   event.preventDefault();
   $(this).toggleClass('active');
   $('header').toggleClass('active');
+  $('.lang').toggleClass('active');
   if ($('header').hasClass('active')) {
       $('body').css('overflow', 'hidden');
     } else {

@@ -34,9 +34,36 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
   TYPOGRAPHY
 ------------------------*/
 h2 {
-    font: 30px 'Bandera Display Cyrillic';
+    font: 30px $b;
     color: $brown;
     text-transform: uppercase;
+    vertical-align: middle;
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px;
+        height: 20px;
+        background-size: 100% 100%;
+        background-image: url("../images/leafLeft.svg");
+        margin-right: 10px;
+        margin-bottom: 14px;
+    }
+    &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px;
+        height: 20px;
+        background-size: 100% 100%;
+        background-image: url("../images/leafRight.svg");
+        margin-left: 10px;
+        margin-bottom: 14px;
+    }
+}
+h3 {
+    font: 24px $cb;
+    margin-bottom: 10px;
 }
 .date {
     font: 17px 'Circe';
@@ -79,6 +106,21 @@ header {
     background: $brown;
     @include transition(all, .4s);
 }
+
+.lang {
+    @include position(absolute, 0, 8px, 0, auto);
+    font: 16px $cb;
+    color: #FFF;
+    @include transition(all, .4s);
+    margin: auto;
+    display: inline-block;
+    height: 12px;
+    line-height: 1;
+    &.active {
+        opacity: 0;
+    }
+}
+
 
 .logo {
     width: 100px;
@@ -141,6 +183,7 @@ nav ul {
                 border: none;
                 a {
                     color: #7E6A6A;
+                    font: 15px "Arial";
                     &:after {
                         display: none;
                     }

@@ -254,7 +254,8 @@ html, body {
   height: 100%; }
 
 p {
-  color: #5E4644; }
+  color: #5E4644;
+  font: 14px "Arial"; }
 
 h1, h2, h3, h4, h5, p {
   color: #5E4644; }
@@ -379,9 +380,34 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
   TYPOGRAPHY
 ------------------------*/
 h2 {
-  font: 30px 'Bandera Display Cyrillic';
+  font: 30px "Bandera-Display-Cyrillic";
   color: #5E4644;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  vertical-align: middle; }
+  h2:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 20px;
+    background-size: 100% 100%;
+    background-image: url("../images/leafLeft.svg");
+    margin-right: 10px;
+    margin-bottom: 14px; }
+  h2:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 20px;
+    background-size: 100% 100%;
+    background-image: url("../images/leafRight.svg");
+    margin-left: 10px;
+    margin-bottom: 14px; }
+
+h3 {
+  font: 24px "Circe-Bold";
+  margin-bottom: 10px; }
 
 .date {
   font: 17px 'Circe';
@@ -429,6 +455,24 @@ header {
   -webkit-transition: all 0.4s;
   -ms-transition: all 0.4s;
   transition: all 0.4s; }
+
+.lang {
+  position: absolute;
+  left: auto;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  font: 16px "Circe-Bold";
+  color: #FFF;
+  -webkit-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+  margin: auto;
+  display: inline-block;
+  height: 12px;
+  line-height: 1; }
+  .lang.active {
+    opacity: 0; }
 
 .logo {
   width: 100px;
@@ -487,7 +531,8 @@ nav ul {
     nav ul .sub li {
       border: none; }
       nav ul .sub li a {
-        color: #7E6A6A; }
+        color: #7E6A6A;
+        font: 15px "Arial"; }
         nav ul .sub li a:after {
           display: none; }
 
