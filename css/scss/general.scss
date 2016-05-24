@@ -194,8 +194,9 @@ nav ul {
     @include position(fixed, 50px, 0, auto, 0);
     height: 470px;
     z-index: 0!important;
-    background-color: $brown;
     overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
     & + .offerSpace {
         height: 470px;
         position: relative;
@@ -262,14 +263,17 @@ nav ul {
         p {
             font-size: 14px;
         }
-        button {
+        .button {
             position: absolute;
             bottom: 22px;
             left: 0;
             right: 0;
             margin: auto;
-            z-index: 2;
+            z-index: 2000;
         }
+    }
+    .button {
+        z-index: 2;
     }
 }
 .slick-arrow {
@@ -283,23 +287,25 @@ nav ul {
     &.slick-prev {
         background-image: url("../images/prev.png");
         left: 20px;
-        background-size: 100% 100% !important;
         -webkit-border-radius: 50% !important;
-        border-radius: 50% !important;
+            border-radius: 50% !important;  
         &:hover,
         &:focus {
-            background-image: url("../images/prev.png");      
+            background: url("../images/prev.png"); 
+            background-size: 100% 100% !important; 
+            z-index: 1001!important;  
         }
     }
     &.slick-next {
         background-image: url("../images/next.png");
-        background-size: 100% 100% !important;
         -webkit-border-radius: 50% !important;
         border-radius: 50% !important;
         right: 20px;
         &:hover,
         &:focus {
-            background-image: url("../images/next.png");      
+            background: url("../images/next.png");
+            background-size: 100% 100% !important;    
+            z-index: 1001!important;  
         }
     }
     &:before {
