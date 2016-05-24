@@ -286,6 +286,27 @@ nav ul {
         z-index: -20;
     }
 }
+
+.offerMiddle {
+    height: 220px;
+    padding: 0 35px;
+    @extend %vertAlign;
+    @include position(fixed, 50px, 0, auto, 0);
+    z-index: 1 !important;
+    & + .offerSpace {
+        height: 220px;
+        position: relative;
+        z-index: -20;
+    }
+
+    img {
+        width: 95%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
 .offerEmpty {
     padding: 20px 0;
     z-index: 3 !important;
