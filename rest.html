@@ -225,7 +225,23 @@
                 <div class="wrapper">
                     <h2>Бронировать</h2>
 
-                    <form action="" class="order__form"></form>
+                    <form action="" class="order__form">
+                        <input type="text" placeholder="Ваше имя" name="name">
+                        <input type="tel" placeholder="Телефон" name="phone">
+                        <div class="radios">
+                            <p class="label">Что заказать:</p>
+
+                            <input type="radio" id="table" name="order">
+                            <label for="table">стол</label>
+
+                            <input type="radio" id="corporative" name="order">
+                            <label for="corporative">мероприятие</label>
+                        </div>
+                        <textarea rows="4" cols="50" placeholder="Комментарий" name="msg"></textarea>
+                        <button class="button gold button--empty">
+                            Заказать
+                        </button>
+                    </form>
                 </div>
             </section>
 
