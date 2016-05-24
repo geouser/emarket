@@ -43,8 +43,10 @@ $('.menu-button').on('click', function(event) {
   $('.lang').toggleClass('active');
   if ($('header').hasClass('active')) {
       $('.overflow').css({'overflow': 'hidden', position: 'relative'});
+      $('section').addClass('blur');
     } else {
       $('.overflow').css({'overflow': 'visible', position: 'static'});
+      $('section').removeClass('blur');
     }
 });
 

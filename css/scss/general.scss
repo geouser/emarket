@@ -82,6 +82,11 @@ section {
     position: relative;
     z-index: 2;
     background-color: #FFF;
+    &.blur {
+        -webkit-filter: blur(6px); 
+        filter: blur(6px); 
+        transform: scale(1.04);
+    }
 }
 
 /*---------------------- 
