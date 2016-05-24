@@ -27,3 +27,20 @@
 		}
 	}
 }
+
+.tour3d {
+	margin-top: -16px;
+	padding-bottom: 30px;
+	padding-top: 0 !important;
+	.tour3d__iframe {
+		height: 460px;
+		overflow: hidden;
+		iframe {
+			height: 117%;
+			margin-top: -18%;
+		}
+	}
+	.button {
+		margin-top: 30px;
+	}
+}

@@ -26,6 +26,11 @@
 		background-color: $brown;
 		color: #fff;
 	}
+	&.gold {
+		border: 2px solid #B99148;
+		color: #B99148;
+		width: 170px;
+	}
 }
 
 a.button {
