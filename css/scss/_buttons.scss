@@ -1,0 +1,29 @@
+.button {
+	width: 150px;
+	height: 40px;
+	font-family: $cb;
+	font-size: 12px;
+	text-transform: uppercase;
+	display: inline-block;
+	vertical-align: middle;
+
+	&.button--full {
+		width: 100%;
+	}
+
+	&.button--empty {
+		border: 2px solid #fff;
+		background-color: transparent;
+		color: #fff;
+	}
+
+	&.button--dark {
+		border: 2px solid $brown;
+		background-color: $brown;
+		color: #fff;
+	}
+}
+
+a.button {
+	line-height: 38px;
+}

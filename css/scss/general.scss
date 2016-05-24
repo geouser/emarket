@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'fonts';
 @import 'settings';
+@import 'buttons';
 @import 'mixins';
 
 
@@ -49,25 +50,6 @@ section {
     z-index: 2;
     background-color: #FFF;
 }
-
-/*---------------------- 
-    BUTTON STYLES
-------------------------*/
-.button {
-    height: 42px; 
-    padding: 0 17px; 
-    border: 1px solid #fff; 
-    background-color: transparent; 
-    color: #FFF; 
-    -webkit-border-radius: 10px;
-    border-radius: 6px; 
-    font: 18px 'helvetica';
-    cursor: pointer;
-    @include transition(all, .2s);
-    
-    &:hover {background-color: rgba(255,255,255, .2);}
-}
-
 
 /*---------------------- 
     HEADER STYLES
@@ -211,11 +193,13 @@ nav ul {
 .offer {
     @include position(fixed, 50px, 0, auto, 0);
     height: 470px;
-    z-index: -1!important;
+    z-index: 0!important;
     background-color: $brown;
     overflow: hidden;
     & + .offerSpace {
         height: 470px;
+        position: relative;
+        z-index: -20;
     }
 }
 
@@ -299,21 +283,23 @@ nav ul {
     &.slick-prev {
         background-image: url("../images/prev.png");
         left: 20px;
-        &:hover {
-            background-image: url("../images/prev.png");
-                background-size: 100% 100% !important;
-    -webkit-border-radius: 50% !important;
-            border-radius: 50% !important;
+        background-size: 100% 100% !important;
+        -webkit-border-radius: 50% !important;
+        border-radius: 50% !important;
+        &:hover,
+        &:focus {
+            background-image: url("../images/prev.png");      
         }
     }
     &.slick-next {
         background-image: url("../images/next.png");
+        background-size: 100% 100% !important;
+        -webkit-border-radius: 50% !important;
+        border-radius: 50% !important;
         right: 20px;
-        &:hover {
-            background-image: url("../images/next.png");
-                background-size: 100% 100% !important;
-    -webkit-border-radius: 50% !important;
-            border-radius: 50% !important;
+        &:hover,
+        &:focus {
+            background-image: url("../images/next.png");      
         }
     }
     &:before {
