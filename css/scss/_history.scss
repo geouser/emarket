@@ -1,0 +1,29 @@
+.historyPage {
+	.historySlider {
+		margin-top: 0;
+		.history-date {
+			margin-bottom: 20px;
+		}
+		h3 {
+			margin-bottom: 30px;
+			padding: 0 65px;
+		}
+		&__slide {
+			padding-bottom: 60px;
+		}
+		&__slide__info {
+			padding-bottom: 0;
+		}
+		.slick-arrow {
+		    bottom: auto !important;
+		    top: 387px !important;
+		}
+		p {
+			height: auto;
+			text-align: justify;
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

@@ -33,6 +33,12 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 /*---------------------- 
   TYPOGRAPHY
 ------------------------*/
+h1 {
+    font: 32px $cb;
+    text-transform: uppercase;
+    margin-top: 20px;
+    line-height: 1;
+}
 h2 {
     font: 30px $b;
     color: $brown;
@@ -252,28 +258,33 @@ nav ul {
 ------------------------*/
 .offer {
     @include position(fixed, 50px, 0, auto, 0);
-    height: 470px;
     z-index: 0!important;
     overflow: hidden;
     width: 360px;
     margin: 0 auto;
+    height: 225px;
     & + .offerSpace {
+        height: 225px;
+        position: relative;
+        z-index: -20;
+    }
+}
+.offerEmpty {
+    padding: 20px 0;
+    z-index: 3;
+    -webkit-border-radius: 50%/16px;
+            border-radius: 50%/16px;
+}
+
+.mainPage .offer {
+     height: 470px;
+     & + .offerSpace {
         height: 470px;
         position: relative;
         z-index: -20;
     }
 }
 
-
-.roundBottom {
-        border-radius: 50%/18px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        -webkit-border-radius: 50%/18px;
-        -webkit-border-top-left-radius: 0;
-        -webkit-border-top-right-radius: 0;
-
-}
 
 
 
@@ -410,7 +421,6 @@ nav ul {
 
 
 .historySec {
-    padding-top: 80px;
     background-image: url(../images/history.png);
     background-repeat: no-repeat;
     background-size: 360px;
@@ -532,6 +542,9 @@ nav ul {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 80px;
+  z-index: 2 !important;
 }
 
 @import 'footer';
+@import 'history';
