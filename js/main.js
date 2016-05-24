@@ -71,6 +71,26 @@ $('.menu-button').on('click', function(event) {
     dots: false,
     arrows: true
   });
+  $('.gallery-slider').magnificPopup({
+    delegate: 'a.photo-item',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    fixedContentPos: false,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('title');
+      }
+    }
+  });
 
 }); // end
 
