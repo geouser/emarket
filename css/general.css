@@ -262,6 +262,9 @@ a[href^=tel] {
   src: url("../fonts/subset-BazhanovC.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-BazhanovC.woff") format("woff"), url("../fonts/subset-BazhanovC.ttf") format("truetype"), url("../fonts/subset-BazhanovC.svg#BazhanovC") format("svg");
   font-weight: normal;
   font-style: normal; }
+html, body {
+  height: 100%; }
+
 p {
   color: #5E4644;
   font: 14px "Arial"; }
@@ -273,7 +276,8 @@ h1, h2, h3, h4, h5, p {
   color: #FFF; }
 
 body {
-  padding-top: 50px; }
+  padding-top: 50px;
+  overflow-x: hidden; }
 
 .wrapper {
   width: 360px;
@@ -295,7 +299,8 @@ body {
   .button.button--empty {
     border: 2px solid #fff;
     background-color: transparent;
-    color: #fff; }
+    color: #fff;
+    width: 165px; }
   .button.button--dark {
     border: 2px solid #5E4644;
     background-color: #5E4644;
@@ -438,7 +443,7 @@ section {
 header {
   width: 310px;
   background-color: #FFF;
-  z-index: 101;
+  z-index: 1002;
   height: 100%;
   padding-top: 45px;
   position: fixed;
@@ -452,6 +457,8 @@ header {
   overflow: scroll; }
   header.active {
     left: 0; }
+  header .wrapper {
+    width: 100%; }
 
 .topLine {
   margin: 0;
@@ -463,11 +470,14 @@ header {
   bottom: auto;
   width: 100%;
   height: 50px;
-  z-index: 100;
+  z-index: 1001;
   background: #5E4644;
   -webkit-transition: all 0.4s;
   -ms-transition: all 0.4s;
   transition: all 0.4s; }
+  .topLine .wrapper {
+    position: relative;
+    height: 100%; }
 
 .lang {
   position: absolute;
@@ -495,6 +505,9 @@ header {
     width: 100%; }
 
 /*-------- nav ---------*/
+nav {
+  width: 310px; }
+
 nav ul {
   width: 310px;
   background-color: #FFFFFF;
@@ -555,7 +568,7 @@ nav ul {
   display: block;
   width: 28px;
   height: 22px;
-  position: fixed;
+  position: absolute;
   left: auto;
   right: 310px;
   top: 14px;
@@ -628,11 +641,6 @@ nav ul {
     position: relative;
     z-index: -20; }
 
-@media screen and (orientation: landscape) {
-  .offer {
-    position: static; }
-    .offer + .offerSpace {
-      display: none; } }
 .roundBottom {
   border-radius: 50%/18px;
   border-top-left-radius: 0;
@@ -647,7 +655,7 @@ nav ul {
   .offerSlider .slick-track {
     height: 100%; }
   .offerSlider__slide {
-    padding-top: 240px;
+    padding-top: 222px;
     height: 100%;
     text-align: center;
     padding-bottom: 64px;
@@ -684,10 +692,11 @@ nav ul {
       color: #FFF;
       text-align: center; }
     .offerSlider__slide p {
-      font-size: 14px; }
+      font-size: 14px;
+      line-height: 19px; }
     .offerSlider__slide .button {
       position: absolute;
-      bottom: 24px;
+      bottom: 30px;
       left: 0;
       right: 0;
       margin: auto;
@@ -699,7 +708,7 @@ nav ul {
   width: 45px !important;
   height: 45px !important;
   top: auto !important;
-  bottom: 0px !important;
+  bottom: 4px !important;
   z-index: 1001 !important;
   background-size: 100% 100% !important;
   -webkit-border-radius: 50% !important;
@@ -725,25 +734,46 @@ nav ul {
   .slick-arrow:before {
     display: none; }
 
-.diva {
-  width: 200%;
-  position: absolute;
-  left: -50%;
-  right: auto;
-  top: 10px;
-  bottom: auto;
-  z-index: 1000; }
-
-.logoOffer {
-  width: 195px;
+.divaImg {
+  width: 360px;
   position: absolute;
   left: 0;
   right: 0;
-  top: 115px;
+  top: 60px;
   bottom: auto;
   margin: auto;
-  z-index: 1000; }
+  height: 240px;
+  background-image: url("../images/diva.svg"), url("../images/logoWhite.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0%, 50% 91%;
+  background-size: 200% 52%, 50% 50%; }
 
+@media screen and (orientation: landscape) {
+  .offer {
+    position: static; }
+    .offer + .offerSpace {
+      display: none; }
+
+  .diva {
+    width: 150%;
+    left: -25%;
+    top: 50px; }
+
+  .logoOffer {
+    top: 125px; } }
+@media (max-height: 520px) {
+  .offer {
+    position: static; }
+    .offer + .offerSpace {
+      display: none; }
+
+  .diva {
+    width: 150%;
+    left: -25%;
+    top: 50px; }
+
+  .logoOffer {
+    top: 125px; } }
 .historySec {
   padding-top: 80px;
   background-image: url(../images/history.png);
@@ -796,7 +826,20 @@ nav ul {
           height: auto; }
       .historySlider__slide__info p {
         color: #5E4644;
-        font-size: 14px; }
+        font: 14px "Arial";
+        display: block;
+        height: 94px;
+        overflow: hidden;
+        position: relative; }
+        .historySlider__slide__info p:after {
+          content: "";
+          text-align: right;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 70%;
+          height: 10px;
+          background: linear-gradient(to right, rgba(255, 255, 255, 0), white 70%); }
     .historySlider__slide .button {
       position: absolute;
       bottom: 49px;
