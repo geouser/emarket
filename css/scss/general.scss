@@ -277,6 +277,10 @@ nav ul {
     z-index: 3 !important;
     -webkit-border-radius: 50%/16px;
             border-radius: 50%/16px;
+    -webkit-border-top-left: 0;
+            border-top-right: 0;
+     -webkit-border-bottom-left: 0;
+            border-bottom-right: 0;
 }
 
 .mainPage .offer {
@@ -548,6 +552,7 @@ nav ul {
   padding-top: 80px;
   z-index: 2 !important;
 }
+
 
 @import 'footer';
 @import 'history';
