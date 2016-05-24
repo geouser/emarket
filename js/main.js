@@ -94,6 +94,18 @@ $('.menu-button').on('click', function(event) {
     }
   });
 
+  $('.select .holder').text($('select#menu option:selected').text());
+  var menuSelector = '#' + $('select#menu').val();
+  $(menuSelector).css('display', 'block');
+  $('select#menu').on('change', function(event) {
+    event.preventDefault();
+    menuSelector = '#' + $(this).val();
+    $('.select .holder').text($(this).find('option:selected').text());
+    $('.menu-list').css('display', 'none');
+    $(menuSelector).css('display', 'block');
+  });
+
+
 }); // end
 
 
