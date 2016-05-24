@@ -42,7 +42,7 @@ $('.menu-button').on('click', function(event) {
   $('header').toggleClass('active');
   $('.lang').toggleClass('active');
   if ($('header').hasClass('active')) {
-      $('.overflow').css({'overflow': 'hidden', height: '100%', position: 'relative'});
+      $('.overflow').css({'overflow': 'hidden', height: '100%', position: 'fixed'});
     } else {
       $('.overflow').css({'overflow': 'visible', height: 'auto', position: 'static'});
     }
