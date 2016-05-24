@@ -1,0 +1,62 @@
+.heading {
+	height: 220px;
+	padding: 0 35px;
+	@extend %vertAlign;
+
+	img {
+		width: 95%;
+		height: auto;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.gallery {
+	margin-top: -20px;
+	padding-top: 65px;
+	background-image: url(../images/footer_bg.jpg);
+	background-position: 50% 0;
+	background-repeat: repeat-x;
+	background-color: #FFF;
+
+	h2 {
+		margin-bottom: 20px;
+	}
+
+	p {
+		width: 320px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.gallery-slider {
+	padding: 0 5px;
+	background-color: #fff;
+
+	.slide {
+		text-align: justify;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 50%;
+			line-height: 0;
+			height: 0;
+		}
+	}
+	.photo-item {
+		width: 175px;
+		height: 100px;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 -2px 4px;
+		background-size: cover;
+		background-position: 50% 50%;
+	}
+
+	.slick-arrow {
+		bottom: -50px!important;
+	}
+}

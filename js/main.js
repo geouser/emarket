@@ -67,6 +67,11 @@ $('.menu-button').on('click', function(event) {
   });
 
 
+  $('.gallery-slider').slick({
+    dots: false,
+    arrows: true
+  });
+
 }); // end
 
 

@@ -82,6 +82,9 @@ section {
     position: relative;
     z-index: 2;
     background-color: #FFF;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*---------------------- 
@@ -548,3 +551,4 @@ nav ul {
 
 @import 'footer';
 @import 'history';
+@import 'rest';
