@@ -42,9 +42,15 @@ $('.menu-button').on('click', function(event) {
   $('header').toggleClass('active');
   $('.lang').toggleClass('active');
   if ($('header').hasClass('active')) {
-      $('html').css('overflow', 'hidden');
+      $('body').css('overflow', 'hidden');
+      if (window.param.isIOS) {
+        $('html').css('overflow', 'hidden');
+      }
     } else {
-      $('html').css('overflow', 'visible');
+      $('body').css('overflow', 'visible');
+      if (window.param.isIOS) {
+        $('html').css('overflow', 'visible');
+      }
     }
 });
 
