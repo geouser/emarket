@@ -220,10 +220,10 @@ nav ul {
 .offer {
     @include position(fixed, 50px, 0, auto, 0);
     height: 470px;
+    z-index: -1!important;
     background-color: $brown;
     & + .offerSpace {
         height: 470px;
-        background-color: #FFF;
     }
 }
 
@@ -234,6 +234,7 @@ nav ul {
         -webkit-border-radius: 50%/18px;
         -webkit-border-top-left-radius: 0;
         -webkit-border-top-right-radius: 0;
+
 }
 
 
@@ -267,7 +268,9 @@ nav ul {
 
 .rounded {
   border-radius: 0% 0% 100% 100% / 0px 0px 40px 40px;
-  box-shadow: 0px 0px 43px 0px rgba(160, 146, 146, 0.6);
+  -webkit-filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
+  -o-filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
+  filter: drop-shadow(0px 10px 15px rgba(160, 146, 146, 0.6));
 }
 
 @import 'footer';

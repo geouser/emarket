@@ -47,8 +47,19 @@ $('.menu-button').on('click', function(event) {
     }
 });
 
+  function fixZindex(){
+    var i = $('section').length;
+    $('section').each(function(index, el) {
+      $(this).css({
+        'z-index': i
+      });
+      i--;
+    });
+    console.log(i);
+  }
+  fixZindex();
 
-});
+}); // end
 
 
 
