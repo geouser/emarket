@@ -63,7 +63,8 @@ $('.menu-button').on('click', function(event) {
 
   $('.offerSlider, .historySlider').slick({
     dots: false,
-    arrows: true
+    arrows: true,
+    fade: true
   });
 
 
