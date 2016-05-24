@@ -42,9 +42,9 @@ $('.menu-button').on('click', function(event) {
   $('header').toggleClass('active');
   $('.lang').toggleClass('active');
   if ($('header').hasClass('active')) {
-      $('.overflow').css({'overflow': 'hidden', height: '100%', position: 'fixed'});
+      $('.overflow').css({'overflow': 'hidden', position: 'relative'});
     } else {
-      $('.overflow').css({'overflow': 'visible', height: 'auto', position: 'static'});
+      $('.overflow').css({'overflow': 'visible', position: 'static'});
     }
 });
 
@@ -56,7 +56,6 @@ $('.menu-button').on('click', function(event) {
       });
       i--;
     });
-    console.log(i);
   }
   fixZindex();
 
