@@ -375,7 +375,7 @@ nav ul {
 }
 .divaImg {
     width: 360px;
-    @include position(absolute, 60px, 0, auto, 0);
+    @include position(absolute, 10px, 0, auto, 0);
     margin: auto;
     height: 240px;
     background-image: url("../images/diva.svg"), url("../images/logoWhite.svg");
@@ -390,8 +390,7 @@ nav ul {
          display: none;
          }
      }
-     .diva {width: 150%; left: -25%; top: 50px;}
-     .logoOffer {top: 125px}
+     .divaImg {top: 60px}
  }
 
 @media (max-height: 520px) {
@@ -400,8 +399,7 @@ nav ul {
          display: none;
          }
      }
-     .diva {width: 150%; left: -25%; top: 50px;}
-     .logoOffer {top: 125px}
+     .divaImg {top: 60px}
  }
 
 
