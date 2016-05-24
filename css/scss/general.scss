@@ -270,6 +270,11 @@ nav ul {
 }
 
 
+
+
+/*---------------------- 
+    OFFER SLIDER
+------------------------*/
 .offerSlider {
     height: 100%;
     .slick-list,
@@ -377,8 +382,6 @@ nav ul {
     background-size: 200% 52%, 50% 50%;
 }
 
-
-
  @media screen and (orientation:landscape) {
      .offer {position: static;
      & + .offerSpace {
@@ -399,6 +402,11 @@ nav ul {
      .logoOffer {top: 125px}
  }
 
+
+
+
+
+
 .historySec {
     padding-top: 80px;
     background-image: url(../images/history.png);
@@ -408,6 +416,9 @@ nav ul {
     background-color: transparent;
     margin-top: -20px;
 }
+/*---------------------- 
+    HISTORY SLIDER
+------------------------*/
 
 .historySlider {
     margin-top: 25px;
@@ -450,7 +461,21 @@ nav ul {
             }
             p {
                 color: $brown;
-                font-size: 14px;
+                font: 14px "Arial";
+                display: block;
+                height: 94px;
+                overflow: hidden;
+                position: relative;
+                &:after {
+                  content: "";
+                  text-align: right;
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  width: 70%;
+                  height: 10px;
+                  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 70%);
+                }
             }
         }
         .button {
