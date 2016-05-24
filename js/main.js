@@ -51,7 +51,7 @@ $('.menu-button').on('click', function(event) {
 });
 
   function fixZindex(){
-    var i = $('section').length;
+    var i = $('section').length +10;
     $('section').each(function(index, el) {
       $(this).css({
         'z-index': i

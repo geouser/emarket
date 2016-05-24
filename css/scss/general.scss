@@ -44,16 +44,22 @@ h2 {
     color: $brown;
     text-transform: uppercase;
     vertical-align: middle;
+    padding: 0 60px;
+    position: relative;
     &:before {
         content: "";
         display: inline-block;
         vertical-align: middle;
-        width: 50px;
         height: 20px;
+        width: 50px;
         background-size: 100% 100%;
         background-image: url("../images/leafLeft.svg");
         margin-right: 10px;
         margin-bottom: 14px;
+        position: absolute;
+        left: 10px;
+        top: 0; bottom: 0;
+        margin: auto;
     }
     &:after {
         content: "";
@@ -65,6 +71,10 @@ h2 {
         background-image: url("../images/leafRight.svg");
         margin-left: 10px;
         margin-bottom: 14px;
+        position: absolute;
+        right: 10px;
+        top: 0; bottom: 0;
+        margin: auto;
     }
 }
 h3 {
@@ -304,6 +314,15 @@ nav ul {
         height: auto;
         display: inline-block;
         vertical-align: middle;
+    }
+    h1 {
+        max-width: 98%;
+        font: 40px $cb;
+        display: inline-block;
+        vertical-align: middle;
+        color: #FFF;
+        text-align: center;
+        line-height: 1.2;
     }
 }
 
@@ -585,8 +604,43 @@ nav ul {
   margin-left: auto;
   margin-right: auto;
   padding-top: 80px;
+  &--top {
+    margin-top: -20px;
+    padding-top: 65px;
+    background-image: url(../images/history.png);
+    background-position: 50% 0;
+    background-repeat: repeat-x;
+    background-color: transparent;
+  }
 }
 
+.content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+form {
+    margin-top: 30px;
+    input,
+    textarea {
+        height: 50px;
+        border: 1px solid #CAC0C0;
+        padding-left: 15px;
+        background-color: #ECE8E9;
+        margin-bottom: 15px;
+        width: 100%;
+        color: #B89B9B;
+        font: 18px $c;
+    }
+    textarea {
+        height: 75px;
+        padding-top: 10px;
+    }
+    button {
+        margin-top: 30px;
+    }
+}
 
 @import 'footer';
 @import 'history';
