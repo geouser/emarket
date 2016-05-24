@@ -42,9 +42,9 @@ $('.menu-button').on('click', function(event) {
   $('header').toggleClass('active');
   $('.lang').toggleClass('active');
   if ($('header').hasClass('active')) {
-      $('body').css('overflow', 'hidden');
+      $('html').css('overflow', 'hidden');
     } else {
-      $('body').css('overflow', 'visible');
+      $('html').css('overflow', 'visible');
     }
 });
 
@@ -63,7 +63,8 @@ $('.menu-button').on('click', function(event) {
 
   $('.offerSlider, .historySlider').slick({
     dots: false,
-    arrows: true
+    arrows: true,
+    fade: true
   });
 
 
