@@ -336,7 +336,7 @@ nav ul {
     width: 45px !important;
     height: 45px !important;
     top: auto !important; bottom: 4px !important;
-    z-index: 1001!important;
+    z-index: 2!important;
     background-size: 100% 100% !important;
     -webkit-border-radius: 50% !important;
             border-radius: 50% !important;
@@ -348,8 +348,7 @@ nav ul {
         &:hover,
         &:focus {
             background: url("../images/prev.png"); 
-            background-size: 100% 100% !important; 
-            z-index: 1001!important;  
+            background-size: 100% 100% !important;  
         }
     }
     &.slick-next {
@@ -361,7 +360,6 @@ nav ul {
         &:focus {
             background: url("../images/next.png");
             background-size: 100% 100% !important;    
-            z-index: 1001!important;  
         }
     }
     &:before {

@@ -42,15 +42,9 @@ $('.menu-button').on('click', function(event) {
   $('header').toggleClass('active');
   $('.lang').toggleClass('active');
   if ($('header').hasClass('active')) {
-      $('body').css('overflow', 'hidden');
-      if (window.param.isIOS) {
-        $('html').css('overflow', 'hidden');
-      }
+      $('.overflow').css({'overflow': 'hidden', height: '100%', position: 'relative'});
     } else {
-      $('body').css('overflow', 'visible');
-      if (window.param.isIOS) {
-        $('html').css('overflow', 'visible');
-      }
+      $('.overflow').css({'overflow': 'visible', height: 'auto', position: 'static'});
     }
 });
 
