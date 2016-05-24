@@ -262,9 +262,6 @@ a[href^=tel] {
   src: url("../fonts/subset-BazhanovC.eot?#iefix") format("embedded-opentype"), url("../fonts/subset-BazhanovC.woff") format("woff"), url("../fonts/subset-BazhanovC.ttf") format("truetype"), url("../fonts/subset-BazhanovC.svg#BazhanovC") format("svg");
   font-weight: normal;
   font-style: normal; }
-html, body {
-  height: 100%; }
-
 p {
   color: #5E4644;
   font: 14px "Arial"; }
@@ -279,7 +276,7 @@ body {
   padding-top: 50px; }
 
 .wrapper {
-  width: 100%;
+  width: 360px;
   max-width: 600px;
   margin: 0 auto;
   text-align: center; }
@@ -632,6 +629,11 @@ nav ul {
     position: relative;
     z-index: -20; }
 
+@media screen and (orientation: landscape) {
+  .offer {
+    position: static; }
+    .offer + .offerSpace {
+      display: none; } }
 .roundBottom {
   border-radius: 50%/18px;
   border-top-left-radius: 0;
@@ -686,7 +688,7 @@ nav ul {
       font-size: 14px; }
     .offerSlider__slide .button {
       position: absolute;
-      bottom: 22px;
+      bottom: 24px;
       left: 0;
       right: 0;
       margin: auto;
