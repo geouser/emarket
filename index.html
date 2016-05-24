@@ -81,40 +81,83 @@
 
         <section class="offer rounded"><!-- start offer section -->
 
-            <div class="offerInfo wrapper"><!-- start offerInfo -->
-
-                <h1>
-                    We offer you to meet people whose ideas and views would be interesting for you! <br> Listen, discuss, learn.
-                </h1>
-
-                <button class="button">
-                    <span>Заказать</span>
-                </button>
-
-            </div><!-- end offerInfo -->
+            <div class="offerSlider">
+                <div class="offerSlider__slide" style="background-image: url('images/offer_slide_1.png')">
+                    <div class="offerSlider__slide__info">
+                        <p>
+                            В самом сердце Петербурга раскинулся один из самых знаменитых русских магазинов прошлого века. Его роскошный интерьер восстановлен по фотографиям 1903 года. В магазине вы найдете различные рыбные, мясные деликатесы, кондитерские и алкогольные 
+                        </p>
+                    </div>
+                    <button class="button">
+                        Подробнее
+                    </button>
+                </div>
+                <div class="offerSlider__slide" style="background-image: url('images/offer_slide_1.png')">
+                    <div class="offerSlider__slide__info">
+                        <p>
+                            2 В самом сердце Петербурга раскинулся один из самых знаменитых русских магазинов прошлого века. Его роскошный интерьер восстановлен по фотографиям 1903 года. В магазине вы найдете различные рыбные, мясные деликатесы, кондитерские и алкогольные 
+                        </p>
+                    </div>
+                    <button class="button">
+                        Подробнее
+                    </button>
+                </div>
+            </div>
+            <img src="images/diva.svg" alt="" class="diva">
+            <img src="images/logoWhite.svg" alt="" class="logoOffer">
 
         </section><!-- end offer section -->
 
-        <div class="offerSpace"></div> 
+        <div class="offerSpace roundBottom"></div> 
 
 
 
-         <section id="" class="rounded"><!-- start  section -->   
-            <div class="wrapper"><!-- wrapper--> 
-                
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit odit vero harum, iusto quos architecto labore, dolores soluta non inventore velit, vel fuga, provident quisquam exercitationem. Nulla ad, adipisci aperiam.</span>
-                <span>Reiciendis explicabo impedit eius voluptas possimus itaque recusandae esse unde tempora enim harum molestiae ullam vel, natus quo porro officia sit deserunt molestias nemo, asperiores consequatur dolor! Aut debitis, rerum.</span>
-                <span>Fugit dolores ex harum, debitis dolore asperiores! Ipsa minima quasi sed aut facere eos culpa dolores ab, aperiam architecto, consectetur nam blanditiis id asperiores itaque, deleniti at dolorum odio obcaecati!</span>
-                <span>Maxime nesciunt veritatis totam animi culpa impedit nihil nulla expedita pariatur, aliquam cupiditate ad velit sequi fuga et officia alias amet beatae dolor delectus adipisci sint quae. Reprehenderit, culpa possimus!</span>
-                <span>Natus sequi earum, ipsa blanditiis, perspiciatis excepturi consequatur, voluptates quo asperiores amet consequuntur quod nihil, laborum dicta fugiat aspernatur. Iste quia atque aliquid sapiente ipsum molestias officiis debitis earum natus.</span></p>
-                 
-            </div><!-- end wrapper -->   
-        </section><!-- end  section --> 
-
-
+        <section class="rounded historySec">
+            <div class="wrapper">
+                <h2>История</h2>
+                <span class="date">1812 — 2014</span>
+                <div class="historySlider">
+                    <div class="historySlider__slide">
+                        <div class="historySlider__slide__info">
+                            <div class="historySlider__slide__info__img">
+                                <img src="images/his_slide_1.png" alt="">
+                            </div>
+                            <div class="history-date">
+                                <span>1902-1903</span>
+                            </div>
+                            <h3>Строитеьльство зданий</h3>
+                            <p>
+                                В самом сердце Петербурга раскинулся один из самых знаменитых русских магазинов прошлого века. Его роскошный интерьер восстановлен по фотографиям 1903 года. В магазине вы найдете различные рыбные, мясные деликатесы, кондитерские и алкогольные 
+                            </p>
+                        </div>
+                        <button class="button">
+                            Подробнее
+                        </button>
+                    </div>
+                    <div class="historySlider__slide">
+                        <div class="historySlider__slide__info">
+                            <div class="historySlider__slide__info__img">
+                                <img src="images/his_slide_1.png" alt="">
+                            </div>
+                            <div class="history-date">
+                                <span>1902-1903</span>
+                            </div>
+                            <h3>Строитеьльство зданий</h3>
+                            <p>
+                                В самом сердце Петербурга раскинулся один из самых знаменитых русских магазинов прошлого века. Его роскошный интерьер восстановлен по фотографиям 1903 года. В магазине вы найдете различные рыбные, мясные деликатесы, кондитерские и алкогольные 
+                            </p>
+                        </div>
+                        <button class="button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
+
         <footer>
             <div class="wrapper">
                 <div class="footer-logo">
@@ -142,7 +185,9 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
 
         <script src="js/main.js"></script>

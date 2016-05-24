@@ -59,6 +59,13 @@ $('.menu-button').on('click', function(event) {
   }
   fixZindex();
 
+
+  $('.offerSlider, .historySlider').slick({
+    dots: false,
+    arrows: true
+  });
+
+
 }); // end
 
 

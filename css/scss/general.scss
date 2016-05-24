@@ -32,31 +32,22 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 /*---------------------- 
   TYPOGRAPHY
 ------------------------*/
-
+h2 {
+    font: 30px 'Bandera Display Cyrillic';
+    color: $brown;
+    text-transform: uppercase;
+}
+.date {
+    font: 17px 'Circe';
+    font-weight: bold;
+    color: $gold;
+}
 
 
 section {
     position: relative;
     z-index: 2;
     background-color: #FFF;
-}
-
-/*---------------------- 
-    BUTTON STYLES
-------------------------*/
-.button {
-    height: 42px; 
-    padding: 0 17px; 
-    border: 1px solid #fff; 
-    background-color: transparent; 
-    color: #FFF; 
-    -webkit-border-radius: 10px;
-    border-radius: 6px; 
-    font: 18px 'helvetica';
-    cursor: pointer;
-    @include transition(all, .2s);
-    
-    &:hover {background-color: rgba(255,255,255, .2);}
 }
 
 /*---------------------- 
@@ -183,14 +174,14 @@ nav ul {
         display: block;
         width: 28px;
         height: 22px;
-        @include position(fixed, 14px, auto, auto, 20px);
+        @include position(fixed, 14px, 310px, auto, auto);
         margin: auto; 
         cursor: pointer;
         z-index: 100;
         background: transparent;
         border: none;
         @include transition(all, .4s);
-        &.active {left: auto; right: 10px;}
+        &.active {right: 10px;}
     .menu-line {
             display: block;
             @include position(absolute, auto, 0, auto, 0);
@@ -222,6 +213,7 @@ nav ul {
     height: 470px;
     z-index: -1!important;
     background-color: $brown;
+    overflow: hidden;
     & + .offerSpace {
         height: 470px;
     }
@@ -238,33 +230,193 @@ nav ul {
 }
 
 
-/*---------------------- 
-    INFOBLOCKS STYLES
-------------------------*/
-.infoBlocks {
-      @include flex($alignI: top, $justify: center, $wrap: wrap);
-      
-      .infoBlock  {
-                  margin-bottom: 20px;
-                  padding: 0 20px;
-                  text-align: center;
-                  border: 1px solid peru;
-            &_icon {
-                        width: 150px;
-                        height: 150px;
-                        text-align: center;
-                        margin: 10px auto 15px;
-            }
+.offerSlider {
+    height: 100%;
+    .slick-list,
+    .slick-track {height: 100%;}
+    &__slide {
+        padding-top: 240px;
+        height: 100%;
+        text-align: center;
+        padding-bottom: 64px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        position: relative;
+        -webkit-background-size: cover;
+             -o-background-size: cover;
+                background-size: cover;
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            height: 100%;
         }
-
-    &.--two  .infoBlock   {    width: 50%;}
-    &.--four .infoBlock   {    width: 25%;}
-    &.--three .infoBlock  {    width: 33%;}
+        &:after {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0, .5);
+            z-index: 0;
+        }
+        &__info {
+            display: inline-block;
+            vertical-align: middle;
+             max-width: 98%;
+            position: relative;
+            z-index: 2;
+        }
+        p, 
+        button {
+            color: #FFF;
+            text-align: center;
+        }
+        p {
+            font-size: 14px;
+        }
+        button {
+            position: absolute;
+            bottom: 22px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 2;
+        }
+    }
+}
+.slick-arrow {
+    width: 45px !important;
+    height: 45px !important;
+    top: auto !important; bottom: 0px !important;
+    z-index: 1001!important;
+    background-size: 100% 100% !important;
+    -webkit-border-radius: 50% !important;
+            border-radius: 50% !important;
+    &.slick-prev {
+        background-image: url("../images/prev.png");
+        left: 20px;
+        &:hover {
+            background-image: url("../images/prev.png");
+                background-size: 100% 100% !important;
+    -webkit-border-radius: 50% !important;
+            border-radius: 50% !important;
+        }
+    }
+    &.slick-next {
+        background-image: url("../images/next.png");
+        right: 20px;
+        &:hover {
+            background-image: url("../images/next.png");
+                background-size: 100% 100% !important;
+    -webkit-border-radius: 50% !important;
+            border-radius: 50% !important;
+        }
+    }
+    &:before {
+        display: none;
+    }
+}
+.diva {
+    width: 200%;
+    @include position(absolute, 10px, auto, auto, -50%);
+    z-index: 1000;
+}
+.logoOffer {
+    width: 195px;
+    @include position(absolute, 115px, 0, auto, 0);
+    margin: auto;
+    z-index: 1000;
 }
 
 
 
+.historySec {
+    padding-top: 80px;
+}
 
+.historySlider {
+    margin-top: 25px;
+    &__slide{
+        padding-bottom: 45px;
+        position: relative;
+        &__info {
+            padding-bottom: 70px;
+            &__img {
+                height: 330px;
+                position: relative;
+                overflow: hidden;
+                -webkit-border-radius: 50%/30px;
+                        border-radius: 50%/30px;
+                &:after {
+                    position: absolute;
+                    left: 0; right: 0;
+                    top: 0; bottom: 0;
+                    margin: auto;
+                    content: "";
+                    display: block;
+                    width: 96%; height: 95%;
+                    background: transaprent;
+                    border: 2px solid #fff;
+                    -webkit-border-radius: 50%/30px;
+                        border-radius: 50%/30px;
+                }
+                img {
+                    position: absolute;
+                    position: absolute;
+                    left: -100%; right: -100%;
+                    top: -100%; bottom: -100%;
+                    margin: auto;
+                    min-height: 100%;
+                    min-width: 100%;
+                    width: auto;
+                    height: auto;
+                }
+            }
+            p {
+                color: $brown;
+                font-size: 14px;
+            }
+        }
+        button {
+            position: absolute;
+            bottom: 22px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 2;
+            color: $brown;
+        }
+    }
+}
+
+.history-date    {
+    z-index: 50;
+    position: relative;
+    width: 176px;
+    margin: -25px auto 20px;
+    -webkit-border-radius: 45%/3px;
+    border-radius: 45%/3px;
+    background: $brown;
+    color: #fff;
+    line-height: 2;
+    &:after {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        border: 1px solid #ba9249;
+        -webkit-box-shadow: 0 0 1px #ba9249;
+        box-shadow: 0 0 1px #ba9249;
+        -webkit-border-radius: 45%/3px;
+        border-radius: 45%/3px;
+        content: '';
+        }
+    }
 
 .rounded {
   border-radius: 0% 0% 100% 100% / 0px 0px 40px 40px;
