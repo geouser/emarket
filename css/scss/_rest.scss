@@ -1,25 +1,12 @@
-.heading {
-	height: 220px;
-	padding: 0 35px;
-	@extend %vertAlign;
-	position: relative;
-	text-align: center;
-
-	img {
-		width: 95%;
-		height: auto;
-		display: inline-block;
-		vertical-align: middle;
-	}
-}
-
 .gallery {
 	margin-top: -20px;
 	padding-top: 65px;
-	background-image: url(../images/footer_bg.jpg);
+	background-image: url(../images/history.png);
+	background-repeat: no-repeat;
+	background-size: 360px;
 	background-position: 50% 0;
-	background-repeat: repeat-x;
-	background-color: #FFF;
+	background-color: transparent;
+
 
 	h2 {
 		margin-bottom: 20px;
@@ -104,6 +91,10 @@
 			left: 0;
 			right: 0;
 			opacity: 0;
+
+			option {
+				text-align: center;
+			}
 		}
 
 		span {
