@@ -1,5 +1,4 @@
 footer {
-	margin-top: -20px;
 	width: 360px;
 	display: block;
 	margin-left: auto;
@@ -7,6 +6,7 @@ footer {
 	border-bottom: 55px solid #fff;
 	position: relative;
 	z-index: 2;
+	overflow: visible!important;
 
 	.wrapper {
 		padding-top: 70px;
