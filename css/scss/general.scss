@@ -95,10 +95,13 @@ section {
     width: 360px;
     margin-left: auto;
     margin-right: auto;
+    -webkit-transition: blur 0.5s ease;
+        -o-transition: blur 0.5s ease;
+        transition: blur 0.5s ease;
     &.blur {
         -webkit-filter: blur(6px); 
         filter: blur(6px); 
-        transform: scale(1.04);
+        /*transform: scale(1.04);*/
     }
 }
 
@@ -335,6 +338,11 @@ nav ul {
             border-top-right: 0;
      -webkit-border-bottom-left: 0;
             border-bottom-right: 0;
+
+    h1 {
+        margin-top: 0;
+        padding: 10px 0;
+    }
 }
 
 .mainPage .offer {
@@ -606,11 +614,28 @@ nav ul {
   padding-top: 80px;
   &--top {
     margin-top: -20px;
-    padding-top: 65px;
-    background-image: url(../images/history.png);
-    background-position: 50% 0;
-    background-repeat: repeat-x;
+    padding-top: 0px;
     background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 25px;
+        position: absolute;
+        background-color: #fff;
+        z-index: -1;    
+    }
+    .wrapper {
+        padding-top: 65px;
+        background-image: url(../images/history.png);
+        background-position: 50% 0;
+        background-repeat: repeat-x;
+        background-color: transparent;
+    }
   }
 }
 
@@ -645,3 +670,5 @@ form {
 @import 'footer';
 @import 'history';
 @import 'rest';
+@import 'fish';
+@import 'news';
