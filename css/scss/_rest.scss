@@ -1,10 +1,4 @@
 .gallery {
-	margin-top: -20px;
-	padding-top: 65px;
-	background-image: url(../images/history.png);
-	background-repeat: no-repeat;
-	background-size: 360px;
-	background-position: 50% 0;
 	background-color: transparent;
 
 	h2 {
@@ -16,6 +10,10 @@
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.photos {
+		padding-bottom: 30px;
 	}
 
 	.button {
@@ -55,7 +53,7 @@
 
 
 .menu {
-	padding-top: 80px;
+	padding-top: 50px;
 
 	h2 {
 		margin-bottom: 20px;

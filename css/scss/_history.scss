@@ -29,9 +29,13 @@
 }
 
 .tour3d {
-	margin-top: -16px;
+	margin-top: -20px;
 	padding-bottom: 30px;
 	padding-top: 0 !important;
+
+	.wrapper {
+		padding-top: 0;
+	}
 	.tour3d__iframe {
 		height: 460px;
 		overflow: hidden;
