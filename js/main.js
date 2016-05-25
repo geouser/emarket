@@ -9,14 +9,16 @@ window.params = {
 jQuery(document).ready(function($) {
 
 $('li:has(ul)').addClass('hasSub');
-$('li.hasSub').click(function(event){
-  event.preventDefault();
+$('li.hasSub').click(function(){
   $(this).siblings().children('.sub').slideUp();
   $(this).siblings().children('a').removeClass('active');
   $(this).children('a').toggleClass('active');
   $(this).children('.sub').slideToggle();
 });
 
+$('.hasSub > a').click(function(event){
+	event.preventDefault();
+});
 /*---------------------------
                               ADD CLASS ON SCROLL
 ---------------------------*/
