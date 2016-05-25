@@ -73,7 +73,7 @@ $('.menu-button').on('click', function(event) {
     dots: false,
     arrows: true
   });
-  $('.gallery-slider').magnificPopup({
+  $('.gallery-slider, .photo-gallery').magnificPopup({
     delegate: 'a.photo-item',
     type: 'image',
     tLoading: 'Loading image #%curr%...',
@@ -87,9 +87,10 @@ $('.menu-button').on('click', function(event) {
       preload: [0,1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      tError: '<a href="%url%">Изображение #%curr%</a> невозсожно загрузить.',
       titleSrc: function(item) {
         return item.el.attr('title');
+        console.log(item);
       }
     }
   });

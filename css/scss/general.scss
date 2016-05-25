@@ -661,6 +661,7 @@ form {
     textarea {
         height: 75px;
         padding-top: 10px;
+        resize: none;
     }
     button {
         margin-top: 30px;
@@ -672,3 +673,4 @@ form {
 @import 'rest';
 @import 'fish';
 @import 'news';
+@import 'photo';
