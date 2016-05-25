@@ -7,6 +7,8 @@
 	text-transform: uppercase;
 	display: inline-block;
 	vertical-align: middle;
+	-webkit-transition: all .2s;
+	        transition: all .2s;
 
 	&.button--full {
 		width: 100%;
@@ -31,6 +33,10 @@
 		border: 2px solid #B99148;
 		color: #B99148;
 		width: 170px;
+		&:hover {
+			background-color: #B99148;
+			color: #FFF;
+		}
 	}
 
 	&.back {

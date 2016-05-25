@@ -532,14 +532,18 @@ nav ul {
                     height: auto;
                 }
             }
-            p {
+            .text {
                 color: $brown;
                 font: 14px "Arial";
                 display: block;
                 height: 94px;
+                min-height: 94px;
                 overflow: hidden;
                 position: relative;
                 padding: 0 10px;
+                p {
+                    margin-bottom: 10px;
+                }
                 &:after {
                   content: "";
                   text-align: right;
@@ -550,6 +554,12 @@ nav ul {
                   width: 100%;
                   height: 25px;
                   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 100%);
+                }
+                &.full {
+                    height: auto;
+                    &:after {
+                        display: none;
+                    }
                 }
             }
         }

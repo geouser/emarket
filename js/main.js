@@ -123,6 +123,11 @@ $('.menu-button').on('click', function(event) {
     $('#'+selector).css('display', 'block');
   });
 
+$('.historySlider__slide .button').click(function(e){
+  e.preventDefault();
+  $(this).siblings('.historySlider__slide__info').children('.text').toggleClass('full');
+});
+
 }); // end
 
 
