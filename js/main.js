@@ -128,6 +128,58 @@ $('.historySlider__slide .button').click(function(e){
   $(this).siblings('.historySlider__slide__info').children('.text').toggleClass('full');
 });
 
+
+  /*---------------------------
+                              GOOGLE MAP
+---------------------------*/
+  var map;
+  function googleMap_initialize() {
+    var lat = $('#map_canvas').data('lat');
+    var long = $('#map_canvas').data('long');
+    var mapCenterCoord = new google.maps.LatLng(lat+0.001, long+0.006);
+    var mapMarkerCoord = new google.maps.LatLng(lat, long);
+    if ( $(window).width() < 768 ) {
+      mapCenterCoord = new google.maps.LatLng(lat, long);
+      mapMarkerCoord = new google.maps.LatLng(lat, long);
+    }
+    $(window).resize(function(event) {
+      if ( $(window).width() < 768 ) {
+        mapCenterCoord = new google.maps.LatLng(lat, long);
+        mapMarkerCoord = new google.maps.LatLng(lat, long);
+      } else {
+        mapCenterCoord = new google.maps.LatLng(lat+0.001, long+0.006);
+        mapMarkerCoord = new google.maps.LatLng(lat, long);
+      }
+    });
+
+    var mapOptions = {
+      center: mapCenterCoord,
+      zoom: 15,
+      //draggable: false,
+      disableDefaultUI: false,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    var markerImage = new google.maps.MarkerImage('images/location.png');
+    var marker = new google.maps.Marker({
+      icon: markerImage,
+      position: mapMarkerCoord, 
+      map: map,
+      title:"MegaExpress"
+    });
+    
+    $(window).resize(function (){
+      map.setCenter(mapCenterCoord);
+    });
+  }
+  if ( $('#map_canvas').length > 0) {
+    googleMap_initialize();   
+  }
+
+
+
 }); // end
 
 
