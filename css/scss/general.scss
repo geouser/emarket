@@ -699,10 +699,13 @@ form {
   }
 
   .map_canvas {
-    width: 120%;
-    height: 120%;
-    @include position(absolute, -12%, 0, 0, -10%);
+    width: 100%;
+    height: 100%;
     z-index: 5;
+
+    .ymaps-2-1-39-copyrights-pane {
+        display: none!important;
+    }
   }
 }
 
@@ -727,6 +730,11 @@ address {
         font-family: $cb;
         color: $brown;
     }
+}
+.contactPage form {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @import 'footer';
