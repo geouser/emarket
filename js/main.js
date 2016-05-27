@@ -89,10 +89,9 @@ $('.menu-button').on('click', function(event) {
       preload: [0,1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
-      tError: '<a href="%url%">Изображение #%curr%</a> невозсожно загрузить.',
+      tError: '<a href="%url%">Изображение #%curr%</a> невозможно загрузить.',
       titleSrc: function(item) {
         return item.el.attr('title');
-        console.log(item);
       }
     }
   });
