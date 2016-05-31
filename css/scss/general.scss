@@ -459,6 +459,9 @@ nav ul {
     background-size: 200% 52%, 50% 50%;
 }
 
+.offer.hasScrolled {
+    opacity: 0;
+}
  /*@media screen and (orientation:landscape) {
      .offer {position: static;
      & + .offerSpace {
@@ -468,7 +471,7 @@ nav ul {
      .divaImg {top: 60px}
  }*/
 
-@media (max-height: 520px) {
+@media (max-height: 479px) {
      .offer {
         position: relative;
         top: 0;
@@ -573,6 +576,7 @@ nav ul {
         }
     }
     .slick-arrow {bottom: 20px !important;}
+
 }
 
 .history-date    {

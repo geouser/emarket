@@ -26,11 +26,13 @@ $(function() {
   var $document = $(document),
       $element = $('.menu-button'),
       $element2 = $('header'),
+      $element3 = $('.offer'),
       className = 'hasScrolled';
 
   $document.scroll(function() {
     $element.toggleClass(className, $document.scrollTop() >= 1);
     $element2.toggleClass(className, $document.scrollTop() >= 1);
+    $element3.toggleClass(className, $document.scrollTop() >= 600);
   });
 });
 
@@ -64,10 +66,22 @@ $('.menu-button').on('click', function(event) {
   fixZindex();
 
 
-  $('.offerSlider, .historySlider').slick({
+  $('.offerSlider').slick({
     dots: false,
     arrows: true,
     fade: true
+  });
+
+   $('.historySlider').slick({
+    dots: false,
+    arrows: true,
+    fade: true,
+    adaptiveHeight: true,
+    onAfterChange: function(slide, index){
+      $('.historySlider').children('.slick-list').css('height', 'auto');
+      $('.historySlider').children('.slick-track').css('height', 'auto');
+      $('.historySlider__slide__info').children('.text').removeClass('full');
+    }
   });
 
 
@@ -125,6 +139,9 @@ $('.menu-button').on('click', function(event) {
 $('.historySlider__slide .button').click(function(e){
   e.preventDefault();
   $(this).siblings('.historySlider__slide__info').children('.text').toggleClass('full');
+  $(this).parent().siblings().children('.historySlider__slide__info').children('.text').removeClass('full');
+  $('.historySlider').children('.slick-list').css('height', 'auto');
+  $('.historySlider').children('.slick-track').css('height', 'auto');
 });
 
 
